@@ -1,0 +1,5 @@
+SQL Server 2017 for Linux
+mcr.microsoft.com/mssql/server:2017-latest
+
+ASP.NET Core/.NET Core for Alpine Linux. More info: https://www.hanselman.com/blog/TryingOutNewNETCoreAlpineDockerImages.aspx
+microsoft/dotnet:2.1-aspnetcore-runtime-alpine
