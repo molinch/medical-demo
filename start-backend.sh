@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$(docker images -q medical-backend 2> /dev/null)" != "" ]]; then
+if docker inspect medical-backend > /dev/null 2>&1; then
   # remove existing containers
   docker rm medical-backend --force
   
@@ -9,4 +9,4 @@ if [[ "$(docker images -q medical-backend 2> /dev/null)" != "" ]]; then
 fi
 
 docker build -t medical-backend src/backend/Medical.Examination
-docker run -p 8000:80 -p 8443:443 --name medical-backend -d medical-backend
+docker run -p 8000:80 -p 8443:443 --rm --name medical-backend -d medical-backend
